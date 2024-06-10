@@ -1,8 +1,10 @@
-import useAuth from '../utils/lib/useAuth';
+import { useUser } from '../context/userContext';
+// import useAuth from '../utils/lib/useAuth';
 
 function Tag() {
-  const user = useAuth();
+  // const user = useAuth();
+  const { email } = useUser();
 
-  return <div>Tag: {user?.email}</div>;
+  return <div>Tag: {email}</div>;
 }
 export default Tag;
